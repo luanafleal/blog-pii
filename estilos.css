@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    color: white;
+    background-color: #C599B6;
+    /*background-image: linear-gradient(to left, rgb(249, 246, 246), black)*/;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+       
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #E53888;
+}
+
+
+
+h1 {
+    font-size: 2rem;   
+    text-transform: uppercase; 
+}
+
+h2 {
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+}
+
+h1, footer {
+    text-align: center;
+    background-color: #E53888;
+    color: white;
+    margin: 0;
+    /*background-image: linear-gradient(to right, #785589, black)*/;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+.vermelha {
+    color: #ff0000;
+}
+
+.verde {
+    color: #00ff00;
+}
+
+.azul {
+    color: #0000ff;
+}
+
+.preta {
+    color: #000000
+}
+
+.branca {
+    color: #ffffff
+}
+
+.cinza-claro {
+    color: #aaaaaa
+}
+
+.cinza-escuro {
+    color: #666666
+}
+
+.amarelo {
+    color: #ffff00;
+}
+
+.rosa {
+    color: #ffc0cb;
+}
+
+.verdana {
+    font-family: verdana;
+}
+
+.monospace {
+    font-family: monospace, 'Courier New', Courier;
+}
+
+.calibri {
+    font-family:  Calibri, 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+.dancing {
+    font-family: "Dancing Script", cursive;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+  
+
+.justificado {
+    text-align: justify;
+}
+
+.direita {
+    text-align: right;
+}
+
+.data-autor {
+    font-style: italic;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.italico {
+    font-style: italic;
+}
+
+
+.sublinhado {
+    text-decoration: underline;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+.lista-seta1 {
+    list-style-image: url("imagens/seta1.png");
+}
+
+.lista-seta2 {
+    list-style-image: url("imagens/seta2.png");
+}
+
+a:link, a:visited {
+    color: #2d2b2b;
+    text-decoration: none;
+}
+
+
+ a:hover, a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+.tabela1 {
+    width: 100%;
+}
+
+.tabela1 th {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+}
+
+.tabela1 td, .tabela2 td {
+    color: white;
+    background-color: rgb(236, 23, 140);
+    padding: 10px;
+}
+
+.tabela2 .linha-impar {
+    color: white;
+    background-color: rgb(7, 59, 203);
+    padding: 10px;
+}
+
+.tabela2 tr {
+    color: white;
+    background-color: rgba(203, 157, 7, 0.762);
+    padding: 10px;
+}
+
+.preenchimento {
+    background-color: rgb(236, 25, 60);
+}
+
+.bordas1 {
+    border: 1px solid white;
+}
+
+.bordas2 {
+    border-top: 2px dotted green;
+    border-right: 2px dashed blue;
+    border-bottom: 2px dotted green;
+    border-left: 2px dashed blue;
+}
+
+.margens {
+    border: 1px solid white;
+    margin: 50px 10px 10px 50px;
+    padding: 10px 0px 10px 10px;
+    
+}
+
+.comprimento {
+    width: 50%;
+    background-color: rgb(255, 0, 157);
+}
+
+article, aside, nav {
+    background-color: #BE5985;
+    color: black;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 1%;
+}
+
+#leiaute-flex {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Para telas menores, empilhar os blocos */
+  @media (max-width: 768px) {
+    #leiaute-flex {
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+    }
+
+    #leiaute-flex > nav,
+    #leiaute-flex > aside {
+        flex: 100%;
+        margin: 1rem;
+    }
+    
+}
+
+
+nav, aside {
+    width: 15%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
