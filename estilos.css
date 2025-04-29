@@ -2,19 +2,65 @@
 
 body {
     color: white;
-    background-color: #C599B6;
-    /*background-image: linear-gradient(to left, rgb(249, 246, 246), black)*/;
+    background-color: #EFEAFE;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
     margin: 0;
        
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #E53888;
+/* Main ------------------------------------------------ */
+header {
+    background-image: url(imagens/backgroundgradient.png);
+    background-color: #8150ff;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    width: 100%;    
 }
 
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid rgba(122, 98, 255, 0.5);
+    width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+.main-nav {
+    background-color: #ffffff21;
+    border: 1px solid rgba(255, 255, 255, 0.541);
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    margin: 4px 0;
+}
+
+.menu-toggle {
+    display: none !important;
+}
 
 
 h1 {
@@ -23,16 +69,16 @@ h1 {
 }
 
 h2 {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #3724664f;
     padding-bottom: .5rem;
 }
 
 h1, footer {
     text-align: center;
-    background-color: #E53888;
     color: white;
     margin: 0;
-    /*background-image: linear-gradient(to right, #785589, black)*/;
+    width: 100%;
+    background-image: linear-gradient(to right, #0a036d, rgb(102, 60, 255),  rgb(255, 87, 199));
 }
 
 footer p {
@@ -58,8 +104,8 @@ footer p {
     color: #000000
 }
 
-.branca {
-    color: #ffffff
+.laranja {
+    color: #FFA500
 }
 
 .cinza-claro {
@@ -151,30 +197,44 @@ ol {
     list-style-image: url("imagens/seta2.png");
 }
 
+/* links  ------------------------------------------------ */
+
 a:link, a:visited {
-    color: #2d2b2b;
+    color: white;
     text-decoration: none;
 }
 
-
- a:hover, a:active {
-    color: white;
+a:hover, a:active {
+    color: #00CAFF;
     text-decoration: underline;
 }
+
+.data-autor a {
+    color: #0000ff;
+}
+
+main a:link,
+main a:visited,
+aside a:link,
+aside a:visited {
+    color: #261355;
+}
+
+/* Tabelas ------------------------------------------------ */
 
 .tabela1 {
     width: 100%;
 }
 
 .tabela1 th {
-    background-color: #000000;
+    background-color: #261355;
     color: white;
     padding: 10px;
 }
 
 .tabela1 td, .tabela2 td {
-    color: white;
-    background-color: rgb(236, 23, 140);
+    color: black;
+    background-color: #9683f34f;
     padding: 10px;
 }
 
@@ -191,22 +251,22 @@ a:link, a:visited {
 }
 
 .preenchimento {
-    background-color: rgb(236, 25, 60);
+    background-color: rgb(149, 103, 253);
 }
 
 .bordas1 {
-    border: 1px solid white;
+    border: 1px solid rgb(149, 103, 253);
 }
 
 .bordas2 {
-    border-top: 2px dotted green;
+    border-top: 2px dotted violet;
     border-right: 2px dashed blue;
-    border-bottom: 2px dotted green;
+    border-bottom: 2px dotted violet;
     border-left: 2px dashed blue;
 }
 
 .margens {
-    border: 1px solid white;
+    border: 1px solid  rgb(149, 103, 253);
     margin: 50px 10px 10px 50px;
     padding: 10px 0px 10px 10px;
     
@@ -214,16 +274,16 @@ a:link, a:visited {
 
 .comprimento {
     width: 50%;
-    background-color: rgb(255, 0, 157);
+    background-color: rgb(247, 215, 34);
 }
 
-article, aside, nav {
-    background-color: #BE5985;
-    color: black;
+article, aside {
+    background-color: #FFFFFF;
+    color: #120D4F;
     padding: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 2.4px 1px rgba(0, 0, 0, 0.4);
     border-radius: 1%;
 }
 
@@ -235,29 +295,63 @@ article, aside, nav {
   /* Para telas menores, empilhar os blocos */
   @media (max-width: 768px) {
     #leiaute-flex {
-      /* flex-direction: column; */
       flex-wrap: wrap;
     }
 
-    #leiaute-flex > nav,
     #leiaute-flex > aside {
         flex: 100%;
         margin: 1rem;
+    }
+
+    .main-nav {
+        padding: 0;
+        text-align: left;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav h3 {
+        margin: 0;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .main-nav h3::after {
+        content: "▾";
+        font-size: 0.9em;
+    }
+
+    .main-nav ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 10px 0;
+        display: none; /* escondido por padrão */
+    }
+
+    .main-nav.active ul {
+        display: block;
+    }
+
+    .main-nav li {
+        margin: 8px 0;
     }
     
 }
 
 
-nav, aside {
+aside {
     width: 15%;
     margin-left: 2rem;
     margin-right: 2rem;
-
 }
 
 img {
     max-width: 100%;
     height: auto;
-  }
-  
-  
+}
+
+
